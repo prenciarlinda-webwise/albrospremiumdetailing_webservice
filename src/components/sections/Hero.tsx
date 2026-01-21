@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Background pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
@@ -48,9 +48,9 @@ export default function Hero() {
             </span>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-              Premium Mobile
-              <span className="block text-blue-600">Car Detailing</span>
-              <span className="block text-gray-900">in San Jose</span>
+              Mobile Car Detailing
+              <span className="block text-blue-600">San Jose</span>
+              <span className="block text-gray-900">& Bay Area</span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">

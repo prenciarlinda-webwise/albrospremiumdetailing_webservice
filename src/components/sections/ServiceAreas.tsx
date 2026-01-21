@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { serviceAreas } from "@/data/services";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function ServiceAreas() {
   return (
-    <section className="py-20 lg:py-28 bg-gray-900 text-white">
+    <section className="py-14 lg:py-20 bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
@@ -13,7 +14,7 @@ export default function ServiceAreas() {
               Service Areas
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold">
-              Mobile Detailing Across the Bay Area
+              Areas We Serve
             </h2>
             <p className="mt-4 text-lg text-gray-300">
               We bring our premium detailing services throughout the San Francisco Bay Area
@@ -22,19 +23,20 @@ export default function ServiceAreas() {
 
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
               {serviceAreas.map((area) => (
-                <div
+                <Link
                   key={area}
-                  className="flex items-center gap-2 text-gray-300"
+                  href={`/mobile-detailing-${area.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   </svg>
-                  <span className="text-sm">{area}</span>
-                </div>
+                  <span className="text-sm">Mobile detailing {area}</span>
+                </Link>
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
               <a
                 href={siteConfig.bookingUrl}
                 target="_blank"
@@ -43,12 +45,12 @@ export default function ServiceAreas() {
               >
                 Book in Your Area
               </a>
-              <a
-                href={`tel:${siteConfig.phoneRaw}`}
+              <Link
+                href="/locations"
                 className="inline-flex items-center justify-center rounded-full border border-gray-600 px-6 py-3 text-sm font-semibold text-white hover:border-white transition-colors"
               >
-                Call to Check Availability
-              </a>
+                See all service areas
+              </Link>
             </div>
           </div>
 

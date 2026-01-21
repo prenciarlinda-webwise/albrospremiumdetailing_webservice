@@ -17,8 +17,8 @@ export function LocalBusinessSchema() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: `${siteConfig.url}/images/og-image.jpg`,
-    logo: `${siteConfig.url}/images/logo.png`,
+    image: `${siteConfig.url}/images/og-image.webp`,
+    logo: `${siteConfig.url}/albros-main-logo.png`,
     priceRange: "$$",
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Debit Card",
@@ -29,14 +29,16 @@ export function LocalBusinessSchema() {
     })),
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "37.3382",
-      longitude: "-121.8863"
+      latitude: siteConfig.geo.latitude,
+      longitude: siteConfig.geo.longitude
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "San Jose",
-      addressRegion: "CA",
-      addressCountry: "US"
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.country
     },
     openingHoursSpecification: [
       {
@@ -63,14 +65,15 @@ export function LocalBusinessSchema() {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "50",
+      ratingValue: siteConfig.reviews.googleRating.toString(),
+      reviewCount: siteConfig.reviews.googleReviewCount.toString(),
       bestRating: "5",
       worstRating: "1"
     },
     sameAs: [
-      // Add social media URLs when available
-    ]
+      siteConfig.social.instagram,
+      siteConfig.social.gmb
+    ].filter(Boolean)
   };
 
   return (

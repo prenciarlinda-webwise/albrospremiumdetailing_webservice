@@ -4,14 +4,19 @@ import { serviceAreas } from "@/data/services";
 import { BreadcrumbSchema } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Book Your Mobile Detail",
-  description: `Contact Albros Premium Car Detailing at ${siteConfig.phone}. Book your mobile car detailing appointment online or call us. Serving San Jose and the Bay Area.`,
+  title: "Book Car Detailing San Jose | Same-Day Available | Albros",
+  description: `Book your mobile car detailing appointment in San Jose. Call ${siteConfig.phone} or book online. Same-day appointments available!`,
+  keywords: [
+    "book car detailing appointment",
+    "schedule car detailing San Jose",
+    "contact mobile detailer",
+  ],
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
   openGraph: {
-    title: "Contact Albros Premium Car Detailing",
-    description: `Get in touch with us at ${siteConfig.phone}. Mobile car detailing throughout San Jose and the Bay Area.`,
+    title: "Book Car Detailing San Jose | Same-Day Available",
+    description: `Book your mobile car detailing appointment in San Jose. Call ${siteConfig.phone} or book online. Same-day appointments available!`,
     url: `${siteConfig.url}/contact`,
   },
 };
@@ -40,7 +45,7 @@ export default function ContactPage() {
               </ol>
             </nav>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
-              Get in Touch
+              Book Your Car Detailing Appointment
             </h1>
             <p className="mt-4 text-lg text-gray-600">
               Ready to give your vehicle the care it deserves? Contact us to book your appointment
@@ -213,7 +218,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section (Optional) */}
+      {/* Map Section */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -225,17 +230,31 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* Map placeholder */}
-          <div className="aspect-[16/9] md:aspect-[21/9] rounded-2xl bg-gray-200 overflow-hidden">
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="text-center p-8">
-                <svg className="mx-auto h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-                <p className="mt-4 text-gray-600 font-medium">Service Area Map</p>
-                <p className="text-sm text-gray-500">Embed Google Maps here for better UX</p>
-              </div>
-            </div>
+          {/* Google Maps Embed */}
+          <div className="aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405691.57240736474!2d-122.26379395!3d37.4134391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1704900000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Albros Premium Car Detailing Service Area - San Francisco Bay Area"
+            />
+          </div>
+
+          {/* Quick links to location pages */}
+          <div className="mt-8 text-center">
+            <a
+              href="/locations"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+            >
+              View all service locations
+              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>

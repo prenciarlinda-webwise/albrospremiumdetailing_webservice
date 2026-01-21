@@ -22,11 +22,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Mobile Car Detailing San Jose & Bay Area`,
+    default: `Mobile Car Detailing San Jose | Premium Auto Detail | Albros`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
+  description: "Premium mobile car detailing in San Jose & Bay Area. We come to you with professional-grade equipment. 5-star rated, fully insured. Book online today!",
+  keywords: [
+    "mobile car detailing San Jose",
+    "car detailing San Jose",
+    "mobile auto detailing Bay Area",
+    "premium car detailing",
+  ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -40,7 +45,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Premium Mobile Car Detailing`,
+    title: `${siteConfig.name} - Premium Mobile Car Detailing`,
     description: siteConfig.description,
     images: [
       {
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Mobile Car Detailing San Jose`,
+    title: `${siteConfig.name} - Mobile Car Detailing San Jose`,
     description: siteConfig.description,
     images: ["/images/og-image.webp"],
   },
@@ -87,9 +92,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/cropped-albros-car-detailing-200x108 - Edited.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/cropped-albros-car-detailing-200x108 - Edited.png" />
         <link rel="manifest" href="/manifest.json" />
         <WebsiteSchema />
         <LocalBusinessSchema />

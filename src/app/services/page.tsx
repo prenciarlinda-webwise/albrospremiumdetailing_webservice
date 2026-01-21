@@ -1,26 +1,69 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/siteConfig";
 import { ServiceSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import CTA from "@/components/sections/CTA";
 
+const serviceFAQs = [
+  {
+    question: "How long does car detailing take?",
+    answer: "Detailing time varies by service: Premium Wash takes about 1 hour, Interior or Exterior Detail takes 2-3 hours, and our comprehensive All-in Detail takes 4-5 hours. Time may vary based on vehicle size and condition."
+  },
+  {
+    question: "How often should I detail my car?",
+    answer: "We recommend a full detail every 3-4 months and maintenance washes every 2-4 weeks. California's climate with fog, UV exposure, and dust means more frequent care helps protect your investment."
+  },
+  {
+    question: "Do you come to my location?",
+    answer: "Yes! We're a fully mobile service. We come to your home, office, or any convenient location throughout the San Jose Bay Area with all necessary equipment, water, and supplies."
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "We accept all major credit cards, debit cards, and cash. Payment is collected after service completion once you've inspected and approved the work."
+  }
+];
+
+function ServicesFAQSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: serviceFAQs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export const metadata: Metadata = {
-  title: "Mobile Car Detailing Services & Pricing",
-  description: "View our complete menu of mobile car detailing services in San Jose and Bay Area. From premium washes starting at $80 to full details at $285. Book online today!",
+  title: "Car Detailing Prices & Services San Jose | From $80 | Albros",
+  description: "View car detailing prices in San Jose. Interior from $200, exterior from $185, full details from $285. Mobile service included. Book online - same day available!",
   keywords: [
-    "car detailing prices San Jose",
-    "mobile detailing services",
-    "interior car detailing cost",
-    "exterior car detailing prices",
-    "full car detail package",
-    "auto detailing menu",
+    "car detailing prices",
+    "car detailing cost",
+    "how much does car detailing cost",
+    "how much is car detailing",
+    "car detailing services San Jose",
+    "auto detailing prices",
+    "full car detail cost",
   ],
   alternates: {
     canonical: `${siteConfig.url}/services`,
   },
   openGraph: {
-    title: "Car Detailing Services & Pricing | Albros Premium",
-    description: "Professional mobile car detailing starting at $80. Interior, exterior, and full detail packages available throughout the Bay Area.",
+    title: "Car Detailing Prices & Services San Jose | From $80",
+    description: "View car detailing prices in San Jose. Interior from $200, exterior from $185, full details from $285. Mobile service included. Book online!",
     url: `${siteConfig.url}/services`,
   },
 };
@@ -34,6 +77,7 @@ export default function ServicesPage() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServicesFAQSchema />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-16 lg:py-24">
@@ -49,11 +93,11 @@ export default function ServicesPage() {
               </ol>
             </nav>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
-              Our Detailing Services
+              Car Detailing Services & Pricing
             </h1>
             <p className="mt-4 text-lg text-gray-600">
-              Professional mobile car detailing packages for every need and budget.
-              All services performed at your location throughout the Bay Area.
+              We offer complete mobile detailing services across the Bay Area.
+              Transparent pricing, no hidden fees. All services performed at your location.
             </p>
           </div>
         </div>
@@ -152,15 +196,16 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Comparison Table */}
+      {/* How Much Does Car Detailing Cost Section */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">
-              Quick Service Comparison
+              How Much Does Car Detailing Cost?
             </h2>
-            <p className="mt-4 text-gray-600">
-              Find the right package for your needs
+            <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
+              Car detailing prices depend on several factors including the service level, vehicle size, and current condition.
+              Our transparent pricing starts at $80 for a Premium Wash and goes up to $285 for our comprehensive All-in Detail package.
             </p>
           </div>
 
@@ -230,6 +275,45 @@ export default function ServicesPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {serviceFAQs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-2xl p-6"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-4">
+              Need <Link href="/interior-car-detailing-san-jose" className="text-blue-600 hover:text-blue-700">interior detailing services</Link> or <Link href="/exterior-car-detailing-san-jose" className="text-blue-600 hover:text-blue-700">exterior detailing</Link>? Check out our dedicated service pages for more details.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
+            >
+              Book Now
+            </Link>
           </div>
         </div>
       </section>

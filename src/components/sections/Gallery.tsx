@@ -27,9 +27,9 @@ const galleryImages = [
     title: "Mobile Service"
   },
   {
-    src: "/images/luxury-car-detailing-bmw.webp",
-    alt: "Luxury BMW car detailing",
-    title: "Luxury Vehicles"
+    src: "/images/premium-car-detail-results.webp",
+    alt: "Premium car detailing results",
+    title: "Premium Results"
   },
   {
     src: "/images/full-car-detailing-services.webp",
@@ -45,10 +45,10 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <section className="py-20 lg:py-28 bg-white" id="gallery">
+    <section className="py-14 lg:py-20 bg-white" id="gallery">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
             Our Work
           </span>

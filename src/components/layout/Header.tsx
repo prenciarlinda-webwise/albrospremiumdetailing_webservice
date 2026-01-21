@@ -11,6 +11,8 @@ export default function Header() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
+    { name: "Locations", href: "/locations" },
+    { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -21,19 +23,15 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2" aria-label="Albros Premium Detailing Home">
+            <Link href="/" aria-label="Albros Premium Car Detailing LLC Home">
               <Image
-                src="/images/albros-premium-logo.webp"
-                alt="Albros Premium Car Detailing Logo"
-                width={44}
-                height={44}
-                className="rounded-lg"
+                src="/cropped-albros-car-detailing-200x108 - Edited.png"
+                alt="Albros Premium Car Detailing LLC Logo"
+                width={200}
+                height={108}
                 priority
+                className="h-12 sm:h-14 w-auto"
               />
-              <div className="hidden sm:block">
-                <span className="text-xl font-bold text-gray-900">Albros</span>
-                <span className="text-xl font-light text-blue-600"> Premium</span>
-              </div>
             </Link>
           </div>
 

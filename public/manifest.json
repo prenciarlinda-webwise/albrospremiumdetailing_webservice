@@ -1,5 +1,5 @@
 {
-  "name": "Albros Premium Car Detailing",
+  "name": "Albros Premium Car Detailing LLC",
   "short_name": "Albros Detailing",
   "description": "Premium mobile car detailing services in San Jose and the Bay Area",
   "start_url": "/",
@@ -8,13 +8,13 @@
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
+      "src": "/cropped-albros-car-detailing-200x108 - Edited.png",
+      "sizes": "200x108",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
+      "src": "/albros-main-logo.png",
+      "sizes": "any",
       "type": "image/png"
     }
   ]

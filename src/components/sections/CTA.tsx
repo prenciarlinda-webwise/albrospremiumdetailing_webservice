@@ -2,9 +2,9 @@ import { siteConfig } from "@/data/siteConfig";
 
 export default function CTA() {
   return (
-    <section className="py-20 lg:py-28 bg-blue-600">
+    <section className="py-14 lg:py-20 bg-blue-600">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl bg-gradient-to-r from-blue-700 to-blue-800 px-6 py-16 sm:px-12 sm:py-20 lg:px-16 overflow-hidden">
+        <div className="relative rounded-3xl bg-gradient-to-r from-blue-700 to-blue-800 px-6 py-12 sm:px-12 sm:py-14 lg:px-16 overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-10">
             <svg className="h-full w-full" fill="none" viewBox="0 0 400 400">
@@ -19,7 +19,7 @@ export default function CTA() {
 
           <div className="relative text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-3xl mx-auto">
-              Ready for a Showroom-Quality Detail?
+              Ready to Get Started?
             </h2>
             <p className="mt-6 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
               Book your appointment today and experience the convenience of premium

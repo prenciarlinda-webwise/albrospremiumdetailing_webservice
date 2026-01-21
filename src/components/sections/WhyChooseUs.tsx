@@ -58,15 +58,15 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-14 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
             Why Choose Us
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">
-            The Albros Premium Difference
+            Why Choose Albros?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             We're not just another car wash. We're dedicated professionals who treat
