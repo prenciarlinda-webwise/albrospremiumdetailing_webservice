@@ -284,15 +284,6 @@ const nextConfig: NextConfig = {
       { source: "/office-ltsc-enterprise-e3-x86-lifetime-activated-without-onedrive-p2p-get-to%f0%9d%9a%9brent", destination: "/", permanent: true },
       { source: "/ms-office-2024-32-bit-no-serial-needed-spanish-updated-ctrlhd-direct-download", destination: "/", permanent: true },
 
-      // =====================================================
-      // CATCH-ALL FOR ANY OTHER SPAM PATTERNS
-      // Using wildcard patterns for common spam URL patterns
-      // =====================================================
-      { source: "/:path*crack:rest*", destination: "/", permanent: true },
-      { source: "/:path*keygen:rest*", destination: "/", permanent: true },
-      { source: "/:path*portable-exe:rest*", destination: "/", permanent: true },
-      { source: "/:path*torrent:rest*", destination: "/", permanent: true },
-      { source: "/:path*magnet-link:rest*", destination: "/", permanent: true },
     ];
   },
 };
