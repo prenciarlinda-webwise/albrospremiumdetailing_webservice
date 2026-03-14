@@ -108,7 +108,7 @@ export default function Footer() {
               {serviceAreas.slice(0, 10).map((area) => (
                 <li key={area}>
                   <Link
-                    href={`/locations/${area.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/mobile-detailing-${area.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     {area}
