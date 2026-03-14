@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -92,6 +93,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W6R2KVMD');`,
+          }}
+        />
         <link rel="icon" href="/cropped-albros-car-detailing-200x108 - Edited.png" type="image/png" />
         <link rel="apple-touch-icon" href="/cropped-albros-car-detailing-200x108 - Edited.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -99,6 +111,14 @@ export default function RootLayout({
         <LocalBusinessSchema />
       </head>
       <body className="font-sans antialiased bg-white text-gray-900">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W6R2KVMD"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50"
