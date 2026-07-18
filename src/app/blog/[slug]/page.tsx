@@ -5,6 +5,10 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/data/siteConfig";
 import { blogPosts, getBlogPostBySlug, getRecentBlogPosts } from "@/data/blog-posts";
 import { BreadcrumbSchema } from "@/components/seo/StructuredData";
+import { renderMarkdown, extractHeadings } from "@/lib/markdown";
+import BlogTOC from "@/components/blog/BlogTOC";
+import BlogAuthorBlock from "@/components/blog/BlogAuthorBlock";
+import BlogSidebar from "@/components/blog/BlogSidebar";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -144,7 +148,9 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const recentPosts = getRecentBlogPosts(3).filter((p) => p.slug !== post.slug).slice(0, 2);
+  const recentPosts = getRecentBlogPosts(4).filter((p) => p.slug !== post.slug).slice(0, 3);
+  const headings = extractHeadings(post.content);
+  const htmlContent = renderMarkdown(post.content);
 
   const breadcrumbs = [
     { name: "Home", url: siteConfig.url },
@@ -219,52 +225,69 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* Content */}
-      <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-16">
-        <div
-          className="prose prose-lg prose-gray max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h3:text-xl prose-h3:mt-8 prose-p:leading-relaxed prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-table:shadow-sm prose-th:bg-gray-100 prose-th:p-3 prose-td:p-3 prose-table:rounded-lg prose-img:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: formatContent(post.content) }}
-        />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="lg:grid lg:grid-cols-[1fr_320px] lg:gap-12 lg:items-start">
+          <article className="min-w-0">
+            <BlogAuthorBlock
+              author={post.author}
+              authorTitle={post.authorTitle}
+              publishedAt={post.publishedAt}
+              updatedAt={post.updatedAt}
+            />
 
-        {/* Tags */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">Tags:</h3>
-          <div className="flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+            <BlogTOC headings={headings} />
+
+            <div
+              className="prose prose-lg prose-gray max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h3:text-xl prose-h3:mt-8 prose-p:leading-relaxed prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-table:shadow-sm prose-th:bg-gray-100 prose-th:p-3 prose-td:p-3 prose-table:rounded-lg prose-img:rounded-xl"
+              dangerouslySetInnerHTML={{ __html: htmlContent }}
+            />
+
+            {/* Tags */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Tags:</h3>
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Ready for Professional Detailing?
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Experience the difference with Albros Premium mobile car detailing.
+              </p>
+              <a
+                href={siteConfig.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
               >
-                {tag}
-              </span>
-            ))}
+                Book Your Appointment
+              </a>
+            </div>
+          </article>
+
+          <div className="mt-12 lg:mt-0">
+            <BlogSidebar relatedPosts={recentPosts} />
           </div>
         </div>
-
-        {/* CTA */}
-        <div className="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            Ready for Professional Detailing?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Experience the difference with Albros Premium mobile car detailing.
-          </p>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-          >
-            Book Your Appointment
-          </a>
-        </div>
-      </article>
+      </div>
 
       {/* Related Posts */}
       {recentPosts.length > 0 && (
         <section className="bg-gray-50 py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">More Articles</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recentPosts.map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
@@ -301,41 +324,3 @@ export default async function BlogPostPage({ params }: Props) {
   );
 }
 
-function formatContent(content: string): string {
-  // Convert markdown to HTML (basic conversion)
-  let html = content
-    // Links - must be processed before other transformations
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-blue-600 hover:text-blue-700 underline">$1</a>')
-    // Horizontal rule
-    .replace(/^---$/gim, '<hr class="my-8 border-gray-200">')
-    // Headers
-    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-    // Bold
-    .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-    // Italic
-    .replace(/\*(.*?)\*/gim, '<em>$1</em>')
-    // Lists
-    .replace(/^\- (.*$)/gim, '<li>$1</li>')
-    // Tables (basic)
-    .replace(/\|(.*)\|/g, (match) => {
-      const cells = match.split('|').filter(c => c.trim());
-      return '<tr>' + cells.map(c => `<td>${c.trim()}</td>`).join('') + '</tr>';
-    })
-    // Paragraphs
-    .replace(/\n\n/g, '</p><p>')
-    // Line breaks
-    .replace(/\n/g, '<br>');
-
-  // Wrap in paragraphs
-  html = '<p>' + html + '</p>';
-
-  // Fix list wrapping
-  html = html.replace(/(<li>.*?<\/li>)+/g, '<ul>$&</ul>');
-
-  // Fix table wrapping
-  html = html.replace(/(<tr>.*?<\/tr>)+/g, '<table><tbody>$&</tbody></table>');
-
-  return html;
-}
