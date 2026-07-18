@@ -6,21 +6,13 @@ import { BreadcrumbSchema } from "@/components/seo/StructuredData";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Exterior Car Detailing San Jose | Wash, Polish & Protect | Albros",
-  description: "Professional exterior car detailing in San Jose. Hand wash, clay bar, polish & wax. Restore your paint's shine. Mobile service available!",
-  keywords: [
-    "exterior car detailing",
-    "exterior detailing",
-    "outside car detail",
-    "paint correction San Jose",
-    "car polish and wax",
-    "hand car wash San Jose",
-  ],
+  title: "Exterior Car Detailing San Jose - Wash, Polish and Protect",
+  description: "Professional exterior car detailing in San Jose. Hand wash, clay bar, polish and wax to restore your paint's shine. Mobile service available.",
   alternates: {
     canonical: `${siteConfig.url}/exterior-car-detailing-san-jose`,
   },
   openGraph: {
-    title: "Exterior Car Detailing San Jose | Wash, Polish & Protect",
+    title: "Exterior Car Detailing San Jose - Wash, Polish and Protect",
     description: "Professional exterior car detailing in San Jose. Hand wash, clay bar, polish & wax. Restore your paint's shine. Mobile service available!",
     url: `${siteConfig.url}/exterior-car-detailing-san-jose`,
   },
@@ -191,7 +183,7 @@ export default function ExteriorDetailingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
             >
-              Book Exterior Detail - $185
+              Book Exterior Detailing - $185
             </a>
             <a
               href={`tel:${siteConfig.phoneRaw}`}
@@ -253,7 +245,7 @@ export default function ExteriorDetailingPage() {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Premium Wash</h3>
+              <h3 className="font-bold text-gray-900 text-lg mb-2">Premium Car Wash</h3>
               <p className="text-3xl font-bold text-blue-600 mb-4">$80</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2">
@@ -281,7 +273,7 @@ export default function ExteriorDetailingPage() {
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                 Recommended
               </span>
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Full Exterior Detail</h3>
+              <h3 className="font-bold text-gray-900 text-lg mb-2">Exterior Car Detailing</h3>
               <p className="text-3xl font-bold text-blue-600 mb-4">$185</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2">
@@ -312,7 +304,7 @@ export default function ExteriorDetailingPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">All-in Detail</h3>
+              <h3 className="font-bold text-gray-900 text-lg mb-2">Full Car Detailing</h3>
               <p className="text-3xl font-bold text-blue-600 mb-4">$285</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2">
@@ -445,9 +437,9 @@ export default function ExteriorDetailingPage() {
             <Link href="/interior-car-detailing-san-jose" className="text-blue-400 hover:text-blue-300">
               interior detailing
             </Link>{" "}
-            or get the{" "}
-            <Link href="/services#all-in-detail" className="text-blue-400 hover:text-blue-300">
-              All-in Detail
+            or get{" "}
+            <Link href="/full-car-detailing" className="text-blue-400 hover:text-blue-300">
+              Full Car Detailing
             </Link>{" "}
             for complete care.
           </p>

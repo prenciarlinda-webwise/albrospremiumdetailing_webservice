@@ -36,26 +36,5 @@ export const siteConfig = {
     googleReviewCount: 15,
     aggregateRating: 5.0,
     totalReviewCount: 15
-  },
-  keywords: [
-    "mobile car detailing San Jose",
-    "car detailing near me",
-    "mobile auto detailing Bay Area",
-    "professional car wash San Jose",
-    "interior car detailing Santa Clara",
-    "exterior car detailing",
-    "fleet detailing services",
-    "mobile car wash Bay Area",
-    "premium car detailing",
-    "hand car wash San Jose",
-    "auto detailing services",
-    "paint protection San Jose",
-    "car cleaning service",
-    "mobile detailing Sunnyvale",
-    "car wash Mountain View",
-    "auto detailing Cupertino",
-    "car detailing Palo Alto",
-    "mobile car wash Fremont",
-    "detailing services Milpitas"
-  ]
+  }
 };

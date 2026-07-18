@@ -49,13 +49,12 @@ export default function Hero() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
               Mobile Car Detailing
-              <span className="block text-blue-600">San Jose</span>
-              <span className="block text-gray-900">& Bay Area</span>
+              <span className="block text-blue-600">Bay Area, CA</span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
               We bring expert care and showroom-quality results directly to your location.
-              Professional detailing services for the San Francisco Bay Area.
+              Headquartered in Santa Clara, proudly serving San Jose, Sunnyvale, Palo Alto and the entire San Francisco Bay Area.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

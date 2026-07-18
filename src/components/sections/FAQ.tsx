@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "How long does a typical detailing service take?",
-    answer: "Service times vary based on the package you choose. A Premium Wash takes about 1 hour, a Deluxe Wash takes approximately 2 hours, Interior or Exterior Details take about 2 hours each, and our comprehensive All-in Detail takes approximately 4 hours. We'll provide a more accurate estimate based on your vehicle's condition."
+    answer: "Service times vary based on the package you choose. A Premium Car Wash takes about 1 hour, a Deluxe Car Wash takes approximately 2 hours, Interior or Exterior Detailing takes about 2 hours each, and our comprehensive Full Car Detailing takes approximately 4 hours. We'll provide a more accurate estimate based on your vehicle's condition."
   },
   {
     question: "Do I need to provide water or electricity?",
@@ -19,6 +19,10 @@ const faqs = [
   {
     question: "What areas do you service?",
     answer: "We proudly serve the entire San Francisco Bay Area including San Jose, Santa Clara, Sunnyvale, Mountain View, Palo Alto, Cupertino, Milpitas, Fremont, Campbell, Los Gatos, Saratoga, San Francisco, Oakland, and San Benito County."
+  },
+  {
+    question: "How do I find mobile car detailing near me?",
+    answer: "Albros Premium is headquartered in Santa Clara and drives to you anywhere across San Jose, Santa Clara, Sunnyvale, Mountain View, Palo Alto, and the rest of the Bay Area. Enter your address when booking online and we'll confirm same-day availability in your neighborhood, no shop visit required."
   },
   {
     question: "Are your products safe for all vehicle types?",

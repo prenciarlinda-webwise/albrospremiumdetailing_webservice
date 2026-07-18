@@ -8,12 +8,12 @@ export default function Footer() {
 
   const navigation = {
     services: [
-      { name: "Premium Wash", href: "/services#premium-wash" },
-      { name: "Deluxe Wash", href: "/services#deluxe-wash" },
-      { name: "Interior Detail", href: "/services#interior-detail" },
-      { name: "Exterior Detail", href: "/services#exterior-detail" },
-      { name: "All-in Detail", href: "/services#all-in-detail" },
-      { name: "Fleet Services", href: "/services#fleet-management" },
+      { name: "Premium Car Wash", href: "/premium-car-wash" },
+      { name: "Deluxe Car Wash", href: "/deluxe-car-wash" },
+      { name: "Interior Detailing", href: "/interior-car-detailing" },
+      { name: "Exterior Detailing", href: "/exterior-car-detailing" },
+      { name: "Full Car Detailing", href: "/full-car-detailing" },
+      { name: "Fleet Detailing", href: "/fleet-detailing" },
     ],
     company: [
       { name: "About Us", href: "/about" },
@@ -26,7 +26,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">Footer</h2>
+      <p id="footer-heading" className="sr-only">Footer</p>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wide uppercase">Services</h3>
+            <p className="text-sm font-semibold text-white tracking-wide uppercase">Services</p>
             <ul className="mt-4 space-y-3">
               {navigation.services.map((item) => (
                 <li key={item.name}>
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Company Column */}
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wide uppercase">Company</h3>
+            <p className="text-sm font-semibold text-white tracking-wide uppercase">Company</p>
             <ul className="mt-4 space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
@@ -103,7 +103,7 @@ export default function Footer() {
 
           {/* Service Areas Column */}
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wide uppercase">Service Areas</h3>
+            <p className="text-sm font-semibold text-white tracking-wide uppercase">Service Areas</p>
             <ul className="mt-4 grid grid-cols-2 gap-2">
               {serviceAreas.slice(0, 10).map((area) => (
                 <li key={area}>

@@ -8,7 +8,7 @@ import CTA from "@/components/sections/CTA";
 const serviceFAQs = [
   {
     question: "How long does car detailing take?",
-    answer: "Detailing time varies by service: Premium Wash takes about 1 hour, Interior or Exterior Detail takes 2-3 hours, and our comprehensive All-in Detail takes 4-5 hours. Time may vary based on vehicle size and condition."
+    answer: "Detailing time varies by service: a Premium Car Wash takes about 1 hour, Interior or Exterior Detailing takes 2-3 hours, and our comprehensive Full Car Detailing takes 4-5 hours. Time may vary based on vehicle size and condition."
   },
   {
     question: "How often should I detail my car?",
@@ -47,23 +47,14 @@ function ServicesFAQSchema() {
 }
 
 export const metadata: Metadata = {
-  title: "Car Detailing Prices & Services San Jose | From $80 | Albros",
-  description: "View car detailing prices in San Jose. Interior from $200, exterior from $185, full details from $285. Mobile service included. Book online - same day available!",
-  keywords: [
-    "car detailing prices",
-    "car detailing cost",
-    "how much does car detailing cost",
-    "how much is car detailing",
-    "car detailing services San Jose",
-    "auto detailing prices",
-    "full car detail cost",
-  ],
+  title: "Car Detailing Prices and Services San Jose - From $80",
+  description: "See car detailing prices in San Jose. Interior $200, exterior $185, full detail $285. Mobile service included, same-day available.",
   alternates: {
     canonical: `${siteConfig.url}/services`,
   },
   openGraph: {
-    title: "Car Detailing Prices & Services San Jose | From $80",
-    description: "View car detailing prices in San Jose. Interior from $200, exterior from $185, full details from $285. Mobile service included. Book online!",
+    title: "Car Detailing Prices and Services San Jose - From $80",
+    description: "See car detailing prices in San Jose. Interior $200, exterior $185, full detail $285. Mobile service included, same-day available.",
     url: `${siteConfig.url}/services`,
   },
 };
@@ -113,7 +104,7 @@ export default function ServicesPage() {
                 id={service.id}
                 className="scroll-mt-24"
               >
-                <ServiceSchema service={service} />
+                {!service.hubSlug && <ServiceSchema service={service} />}
                 <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-start ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}>
@@ -147,7 +138,7 @@ export default function ServicesPage() {
                       {service.description}
                     </p>
 
-                    <div className="mt-8">
+                    <div className="mt-8 flex flex-wrap items-center gap-4">
                       <a
                         href={siteConfig.bookingUrl}
                         target="_blank"
@@ -159,6 +150,14 @@ export default function ServicesPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                       </a>
+                      {service.hubSlug && (
+                        <Link
+                          href={`/${service.hubSlug}`}
+                          className="text-sm font-semibold text-blue-600 hover:text-blue-700"
+                        >
+                          Full details on {service.name} →
+                        </Link>
+                      )}
                     </div>
                   </div>
 
@@ -168,7 +167,7 @@ export default function ServicesPage() {
                       What's Included
                     </h3>
                     <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => (
+                      {(service.hubSlug ? service.features.slice(0, 3) : service.features).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-3">
                           <svg
                             className="h-5 w-5 flex-shrink-0 text-blue-600 mt-0.5"
@@ -183,6 +182,14 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+                    {service.hubSlug && service.features.length > 3 && (
+                      <Link
+                        href={`/${service.hubSlug}`}
+                        className="mt-4 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700"
+                      >
+                        +{service.features.length - 3} more, see full details →
+                      </Link>
+                    )}
                   </div>
                 </div>
 
@@ -205,7 +212,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
               Car detailing prices depend on several factors including the service level, vehicle size, and current condition.
-              Our transparent pricing starts at $80 for a Premium Wash and goes up to $285 for our comprehensive All-in Detail package.
+              Our transparent pricing starts at $80 for a Premium Car Wash and goes up to $285 for our comprehensive Full Car Detailing package.
             </p>
           </div>
 
@@ -225,9 +232,9 @@ export default function ServicesPage() {
                 {services.filter(s => s.price !== null && s.id !== 'free-assessment').map((service) => (
                   <tr key={service.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4">
-                      <a href={`#${service.id}`} className="font-medium text-gray-900 hover:text-blue-600">
+                      <Link href={service.hubSlug ? `/${service.hubSlug}` : `#${service.id}`} className="font-medium text-gray-900 hover:text-blue-600">
                         {service.shortName}
-                      </a>
+                      </Link>
                       {service.popular && (
                         <span className="ml-2 text-xs text-blue-600 font-semibold">Popular</span>
                       )}

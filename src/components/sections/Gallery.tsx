@@ -9,12 +9,12 @@ const galleryImages = [
   {
     src: "/images/interior-detailing-san-jose.webp",
     alt: "Interior car detailing in San Jose",
-    title: "Interior Detail"
+    title: "Interior Detailing"
   },
   {
     src: "/images/exterior-detailing-bay-area.webp",
     alt: "Exterior car detailing in Bay Area",
-    title: "Exterior Detail"
+    title: "Exterior Detailing"
   },
   {
     src: "/images/professional-hand-car-wash.webp",

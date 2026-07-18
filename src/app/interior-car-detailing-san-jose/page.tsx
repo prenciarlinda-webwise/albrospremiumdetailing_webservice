@@ -6,21 +6,13 @@ import { BreadcrumbSchema } from "@/components/seo/StructuredData";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Interior Car Detailing San Jose | Deep Clean from $200 | Albros",
-  description: "Professional interior car detailing in San Jose. Deep cleaning for seats, carpets, dashboard & more. Mobile service comes to you. Book online!",
-  keywords: [
-    "interior car detailing near me",
-    "car interior detailing",
-    "interior car detailing",
-    "how much does interior car detailing cost",
-    "interior car detailing cost",
-    "deep interior cleaning car",
-  ],
+  title: "Interior Car Detailing San Jose - Deep Clean from $200",
+  description: "Professional interior car detailing in San Jose. Deep cleaning for seats, carpets, and dashboard. Mobile service comes to you. Book online.",
   alternates: {
     canonical: `${siteConfig.url}/interior-car-detailing-san-jose`,
   },
   openGraph: {
-    title: "Interior Car Detailing San Jose | Deep Clean from $200",
+    title: "Interior Car Detailing San Jose - Deep Clean from $200",
     description: "Professional interior car detailing in San Jose. Deep cleaning for seats, carpets, dashboard & more. Mobile service comes to you.",
     url: `${siteConfig.url}/interior-car-detailing-san-jose`,
   },
@@ -178,7 +170,7 @@ export default function InteriorDetailingPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
             >
-              Book Interior Detail - $200
+              Book Interior Detailing - $200
             </a>
             <a
               href={`tel:${siteConfig.phoneRaw}`}
@@ -407,8 +399,8 @@ export default function InteriorDetailingPage() {
               exterior detailing
             </Link>{" "}
             or{" "}
-            <Link href="/services#all-in-detail" className="text-blue-400 hover:text-blue-300">
-              All-in Detail
+            <Link href="/full-car-detailing" className="text-blue-400 hover:text-blue-300">
+              Full Car Detailing
             </Link>{" "}
             for the best value.
           </p>

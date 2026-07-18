@@ -8,12 +8,15 @@ export interface Service {
   duration: string;
   features: string[];
   popular?: boolean;
+  hubSlug?: string;
+  updatedAt: string;
 }
 
 export const services: Service[] = [
   {
     id: "free-assessment",
-    name: "Free Vehicle Assessment",
+    updatedAt: "2026-07-18",
+    name: "Free Car Detailing Assessment",
     shortName: "Free Assessment",
     description: "Not sure which detailing service is right for your car? Let us take a look—for free! Our expert technicians will assess your vehicle's condition and recommend the perfect service package.",
     price: 0,
@@ -29,8 +32,10 @@ export const services: Service[] = [
   },
   {
     id: "premium-wash",
-    name: "Premium Wash",
-    shortName: "Premium Wash",
+    updatedAt: "2026-07-18",
+    name: "Premium Car Wash",
+    shortName: "Premium Car Wash",
+    hubSlug: "premium-car-wash",
     description: "Our entry-level professional wash delivers a thorough clean that exceeds typical car wash standards. Perfect for regular maintenance.",
     price: 80,
     priceLabel: "$80",
@@ -45,8 +50,10 @@ export const services: Service[] = [
   },
   {
     id: "deluxe-wash",
-    name: "Deluxe Wash",
-    shortName: "Deluxe Wash",
+    updatedAt: "2026-07-18",
+    name: "Deluxe Car Wash",
+    shortName: "Deluxe Car Wash",
+    hubSlug: "deluxe-car-wash",
     description: "Elevate your vehicle's cleanliness with our comprehensive deluxe wash package. Includes everything in Premium plus interior care.",
     price: 165,
     priceLabel: "$165",
@@ -64,8 +71,10 @@ export const services: Service[] = [
   },
   {
     id: "interior-detail",
-    name: "Albros Premium Interior Detail",
-    shortName: "Interior Detail",
+    updatedAt: "2026-07-18",
+    name: "Interior Car Detailing",
+    shortName: "Interior Detailing",
+    hubSlug: "interior-car-detailing",
     description: "Transform your vehicle's interior with our comprehensive detailing service. We clean, condition, and protect every surface.",
     price: 200,
     priceLabel: "$200",
@@ -83,8 +92,10 @@ export const services: Service[] = [
   },
   {
     id: "exterior-detail",
-    name: "Albros Premium Exterior Detail",
-    shortName: "Exterior Detail",
+    updatedAt: "2026-07-18",
+    name: "Exterior Car Detailing",
+    shortName: "Exterior Detailing",
+    hubSlug: "exterior-car-detailing",
     description: "Restore your vehicle's exterior shine with our professional exterior detailing service. Protection meets perfection.",
     price: 185,
     priceLabel: "$185",
@@ -102,8 +113,10 @@ export const services: Service[] = [
   },
   {
     id: "all-in-detail",
-    name: "Albros Premium All-in Detail",
-    shortName: "All-in Detail",
+    updatedAt: "2026-07-18",
+    name: "Full Car Detailing",
+    shortName: "Full Detail",
+    hubSlug: "full-car-detailing",
     description: "Our signature complete detailing package combines interior and exterior services for the ultimate vehicle transformation. The best value for comprehensive care.",
     price: 285,
     priceLabel: "$285",
@@ -123,8 +136,10 @@ export const services: Service[] = [
   },
   {
     id: "biohazard-cleanup",
-    name: "Clean & Safe Biohazard Package",
+    updatedAt: "2026-07-18",
+    name: "Biohazard Cleanup Service",
     shortName: "Biohazard Cleanup",
+    hubSlug: "biohazard-cleanup",
     description: "Professional cleanup of biological substances like vomit, which can pose health risks. We sanitize and deodorize to restore your vehicle to a safe, clean state.",
     price: null,
     priceLabel: "Contact for Quote",
@@ -140,8 +155,10 @@ export const services: Service[] = [
   },
   {
     id: "fleet-management",
-    name: "Fleet Management Services",
-    shortName: "Fleet Services",
+    updatedAt: "2026-07-18",
+    name: "Fleet Detailing Services",
+    shortName: "Fleet Detailing",
+    hubSlug: "fleet-detailing",
     description: "Keep your business fleet looking professional with our customized fleet management detailing programs. Volume discounts and scheduled maintenance available.",
     price: null,
     priceLabel: "Custom Quote",

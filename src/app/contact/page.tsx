@@ -4,18 +4,13 @@ import { serviceAreas } from "@/data/services";
 import { BreadcrumbSchema } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Book Car Detailing San Jose | Same-Day Available | Albros",
+  title: "Book Car Detailing San Jose - Same-Day Available",
   description: `Book your mobile car detailing appointment in San Jose. Call ${siteConfig.phone} or book online. Same-day appointments available!`,
-  keywords: [
-    "book car detailing appointment",
-    "schedule car detailing San Jose",
-    "contact mobile detailer",
-  ],
   alternates: {
     canonical: `${siteConfig.url}/contact`,
   },
   openGraph: {
-    title: "Book Car Detailing San Jose | Same-Day Available",
+    title: "Book Car Detailing San Jose - Same-Day Available",
     description: `Book your mobile car detailing appointment in San Jose. Call ${siteConfig.phone} or book online. Same-day appointments available!`,
     url: `${siteConfig.url}/contact`,
   },
@@ -233,14 +228,14 @@ export default function ContactPage() {
           {/* Google Maps Embed */}
           <div className="aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405691.57240736474!2d-122.26379395!3d37.4134391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1704900000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.271892982197!2d-121.9552!3d37.3541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae50ea71d1cc564b%3A0x78d1ebb5988565ca!2sAlbros%20Premium%20Car%20Detailing%20LLC!5e0!3m2!1sen!2sus!4v1704900000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Albros Premium Car Detailing Service Area - San Francisco Bay Area"
+              title="Albros Premium Car Detailing - Santa Clara, CA"
             />
           </div>
 

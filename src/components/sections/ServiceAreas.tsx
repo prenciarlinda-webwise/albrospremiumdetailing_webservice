@@ -17,8 +17,8 @@ export default function ServiceAreas() {
               Areas We Serve
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              We bring our premium detailing services throughout the San Francisco Bay Area
-              and San Benito County. No matter where you are, we'll come to you.
+              Searching for mobile car detailing near me? We bring our premium detailing services
+              throughout the San Francisco Bay Area and San Benito County. No matter where you are, we'll come to you.
             </p>
 
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">

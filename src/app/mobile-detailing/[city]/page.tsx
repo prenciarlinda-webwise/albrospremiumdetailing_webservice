@@ -32,14 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: location.meta.title,
     description: location.meta.description,
-    keywords: [
-      `mobile car detailing ${location.name}`,
-      `car detailing ${location.name} CA`,
-      `auto detailing ${location.name}`,
-      `mobile detailing ${location.name}`,
-      `car wash ${location.name}`,
-      `professional detailing ${location.name}`,
-    ],
     alternates: {
       canonical: `${siteConfig.url}/mobile-detailing-${location.slug}`,
     },
@@ -211,7 +203,7 @@ export default async function LocationPage({ params }: Props) {
                 We Come to You in {location.name}
               </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Our mobile detailing team serves all {location.name} neighborhoods. Whether you're at home, work, or anywhere else, we bring professional detailing directly to your location.
+                Searching for mobile car detailing near me in {location.name}? Our team serves every {location.name} neighborhood. Whether you're at home, work, or anywhere else, we bring professional detailing directly to your location.
               </p>
 
               <div className="mt-8">
@@ -268,6 +260,12 @@ export default async function LocationPage({ params }: Props) {
               <Link href="/interior-car-detailing-san-jose" className="text-blue-600 hover:text-blue-700">Interior detailing</Link>,{" "}
               <Link href="/exterior-car-detailing-san-jose" className="text-blue-600 hover:text-blue-700">exterior detailing</Link>,{" "}
               and complete packages. <Link href="/services" className="text-blue-600 hover:text-blue-700">View services and pricing</Link>.
+              {location.slug === "santa-clara" && (
+                <>
+                  {" "}Also see our dedicated{" "}
+                  <Link href="/auto-detailing-santa-clara" className="text-blue-600 hover:text-blue-700">auto detailing Santa Clara</Link> page.
+                </>
+              )}
             </p>
           </div>
 

@@ -22,11 +22,22 @@ export function LocalBusinessSchema() {
     priceRange: "$$",
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Debit Card",
-    areaServed: serviceAreas.map(area => ({
-      "@type": "City",
-      name: area,
-      "@id": `https://www.wikidata.org/wiki/${area.replace(/\s+/g, "_")}`
-    })),
+    areaServed: [
+      {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: siteConfig.geo.latitude,
+          longitude: siteConfig.geo.longitude
+        },
+        geoRadius: "40000"
+      },
+      ...serviceAreas.map(area => ({
+        "@type": "City",
+        name: area,
+        "@id": `https://www.wikidata.org/wiki/${area.replace(/\s+/g, "_")}`
+      }))
+    ],
     geo: {
       "@type": "GeoCoordinates",
       latitude: siteConfig.geo.latitude,

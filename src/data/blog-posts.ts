@@ -19,6 +19,90 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-much-does-mobile-car-detailing-cost-san-jose",
+    title: "How Much Does Mobile Car Detailing Cost in San Jose?",
+    excerpt: "Real 2026 prices for mobile car detailing in San Jose and the Bay Area, from an $80 premium wash to a $285 full interior and exterior detail. See exactly what's included in every package.",
+    content: `
+Mobile car detailing in San Jose and the greater Bay Area costs **$80 to $285**, depending on the service level and your vehicle's condition. A quick exterior refresh starts at $80, while a complete interior and exterior transformation runs $285. Below is the full breakdown so you know exactly what you're paying for before you book.
+
+## San Jose Mobile Detailing Prices at a Glance
+
+| Service | Price | Duration | Best For |
+|---------|-------|----------|----------|
+| Free Car Detailing Assessment | FREE | 1 hour | Not sure what you need |
+| Premium Car Wash | $80 | 1 hour | Regular maintenance |
+| Deluxe Car Wash | $165 | 2 hours | Exterior + light interior |
+| Exterior Car Detailing | $185 | 2 hours | Paint restoration & protection |
+| Interior Car Detailing | $200 | 2 hours | Deep cabin cleaning |
+| Full Car Detailing | $285 | 4 hours | Complete transformation |
+
+These are current [Albros Premium](/services) rates for standard sedans and mid-size vehicles in San Jose, Santa Clara, and the surrounding Bay Area. Larger vehicles (trucks, SUVs, third-row minivans) and heavily soiled interiors can run higher; we always confirm final pricing before starting work, never after.
+
+## What Affects the Price of a Car Detail
+
+Three factors move the price up or down from the base rates above:
+
+- **Vehicle size**: A two-door sedan costs less to detail than a three-row SUV or full-size truck simply because there's more surface area and more seats to clean.
+- **Current condition**: Heavy pet hair, deep-set stains, or months of neglected grime take longer to correct than a car that's washed regularly.
+- **Add-ons**: Services like clay bar decontamination, engine bay cleaning, and headlight restoration are included in our higher-tier packages but can also be added individually.
+
+## Mobile Detailing Prices by Service
+
+### Premium Car Wash: $80
+Our entry-level professional wash. Exterior hand wash, spot-free purified rinse, hand dry with microfiber towels, tire and wheel cleaning, and interior/exterior window cleaning. Takes about an hour and is the right choice for cars on a regular maintenance schedule.
+
+### Deluxe Car Wash: $165
+Everything in the Premium Car Wash, plus an interior vacuum, dashboard and console wipe-down, door jamb cleaning, and air freshener application. Our most popular starting package for drivers who want the cabin refreshed without full interior detailing.
+
+### Exterior Car Detailing: $185
+A scratch-free hand wash, clay bar treatment to remove bonded contaminants, paint sealant application, tire dressing, wheel detailing, trim restoration, and chrome polishing. This is the package to book if your paint feels rough to the touch or water no longer beads on the surface.
+
+### Interior Car Detailing: $200
+Deep vacuum of carpets, mats, seats, and trunk; dashboard and console detailing; leather or vinyl conditioning; door panel cleaning; headliner spot cleaning; air vent cleaning; and interior window cleaning. Ideal after a road trip, before selling a vehicle, or for cars with kids and pets.
+
+### Full Car Detailing: $285
+Our most comprehensive package, combining the full interior and exterior services above, plus engine bay cleaning and headlight restoration. Takes about 4 hours and delivers the most complete transformation.
+
+## Is Mobile Detailing More Expensive Than a Shop?
+
+Mobile detailing in San Jose is typically comparable to, not more expensive than, shop-based detailing, and it saves the time and fuel cost of driving to a location and waiting. Because a mobile detailer like Albros Premium brings water tanks, generators, and all equipment to you, there's no facility overhead built into the price the way there is at a fixed shop location.
+
+## How to Get an Accurate Price for Your Car
+
+List prices assume normal wear on a standard-size vehicle. If your car has heavier staining, pet hair, or is a larger vehicle, the best way to get an exact number is our [free vehicle assessment](/services#free-assessment): a no-obligation inspection where we look at your car's actual condition and quote a firm price before any work begins. According to the [International Detailing Association](https://the-ida.com/), pricing that varies by vehicle condition and size is standard practice across the professional detailing industry, since two cars of the same make and model can require very different amounts of work.
+
+Ready to book? [Contact us](/contact) or check service availability on our [service areas page](/locations), including [San Jose](/mobile-detailing-san-jose) and our home city of [Santa Clara](/auto-detailing-santa-clara).
+
+---
+
+## Frequently Asked Questions
+
+### How much does car detailing cost in San Jose?
+Car detailing in San Jose ranges from $80 for a Premium Car Wash to $285 for Full Car Detailing. Most customers choose the $165 Deluxe Car Wash or $200 Interior Car Detailing. [View current pricing](/services) for the exact package that fits your vehicle.
+
+### How much does interior detailing cost?
+A full interior detail costs $200 and includes deep vacuuming, dashboard and console detailing, leather or vinyl conditioning, and odor elimination. It takes about 2 hours for a standard sedan or mid-size vehicle.
+
+### How much is a full car detail?
+A full detail, meaning complete interior and exterior service, is $285 through our Full Car Detailing package. It takes approximately 4 hours and includes clay bar decontamination, paint sealant, engine bay cleaning, and headlight restoration alongside the full interior service.
+
+### Does mobile detailing cost more than an in-shop detail?
+No. Mobile detailing prices in San Jose are generally comparable to shop pricing, and you save the time and cost of dropping off and picking up your vehicle. [Learn more about how mobile detailing works](/blog/mobile-car-detailing-what-to-expect).
+    `,
+    author: "Albros Premium Team",
+    publishedAt: "2026-07-16",
+    updatedAt: "2026-07-16",
+    category: "Pricing",
+    tags: ["car detailing prices", "san jose", "mobile detailing cost", "pricing guide", "bay area"],
+    image: "/images/full-car-detailing-services.webp",
+    imageAlt: "Full range of mobile car detailing service packages and pricing in San Jose",
+    readTime: "6 min read",
+    meta: {
+      title: "How Much Does Car Detailing Cost in San Jose?",
+      description: "Real 2026 pricing for mobile car detailing in San Jose: $80 premium wash to $285 full detail. See exactly what's included in every package before you book."
+    }
+  },
+  {
     slug: "complete-guide-car-detailing-san-jose",
     title: "Complete Guide to Car Detailing in San Jose",
     excerpt: "Everything you need to know about professional car detailing in San Jose and the Bay Area, from services to pricing and what to expect.",
@@ -99,10 +183,10 @@ Prices in the Bay Area typically range from $80 to $300+ depending on the servic
 Ready to give your car the professional care it deserves? [Albros Premium Car Detailing](/services) offers mobile services throughout San Jose, Santa Clara, Sunnyvale, and the entire Bay Area. We bring showroom-quality results directly to your home or office.
 
 **Our Popular Services:**
-- [Premium Wash](/services#premium-wash) - Starting at $80
-- [Interior Detail](/services#interior-detail) - Complete cabin restoration
-- [Exterior Detail](/services#exterior-detail) - Paint correction and protection
-- [All-in Detail](/services#all-in-detail) - Our most comprehensive package
+- [Premium Car Wash](/premium-car-wash) - Starting at $80
+- [Interior Detailing](/interior-car-detailing) - Complete cabin restoration
+- [Exterior Detailing](/exterior-car-detailing) - Paint correction and protection
+- [Full Car Detailing](/full-car-detailing) - Our most comprehensive package
 
 [View all service areas](/locations) | [Book your appointment](/contact)
 
@@ -131,7 +215,7 @@ A car wash removes surface dirt, while detailing is a comprehensive cleaning, re
     imageAlt: "Professional car detailing service in San Jose, California",
     readTime: "8 min read",
     meta: {
-      title: "Complete Guide to Car Detailing in San Jose | Bay Area Auto Care",
+      title: "Complete Guide to Car Detailing in San Jose - Bay Area Auto Care",
       description: "Your ultimate guide to professional car detailing in San Jose and the Bay Area. Learn about services, pricing, and what to expect from mobile detailing."
     }
   },
@@ -237,9 +321,9 @@ For most California drivers, we recommend:
 Ready to establish a regular detailing routine? [Albros Premium](/services) offers flexible scheduling and maintenance packages throughout the Bay Area. We'll help you create a custom schedule that protects your vehicle year-round.
 
 **Recommended Service Schedule:**
-- **Quarterly**: [All-in Detail](/services#all-in-detail) for comprehensive care
-- **Monthly**: [Deluxe Wash](/services#deluxe-wash) for regular maintenance
-- **As Needed**: [Interior Detail](/services#interior-detail) for deep cleaning
+- **Quarterly**: [Full Car Detailing](/full-car-detailing) for comprehensive care
+- **Monthly**: [Deluxe Car Wash](/deluxe-car-wash) for regular maintenance
+- **As Needed**: [Interior Detailing](/interior-car-detailing) for deep cleaning
 
 [Find your nearest service area](/locations) | [Contact us for a custom plan](/contact)
 
@@ -251,7 +335,7 @@ Ready to establish a regular detailing routine? [Albros Premium](/services) offe
 For California drivers, we recommend washing every 2-4 weeks and full detailing every 3-4 months. UV exposure and environmental factors make regular maintenance crucial.
 
 ### Does the Bay Area fog damage car paint?
-Yes, fog deposits mineral-rich moisture that can cause water spots and accelerate oxidation. Regular [exterior detailing](/services#exterior-detail) with paint protection helps prevent damage.
+Yes, fog deposits mineral-rich moisture that can cause water spots and accelerate oxidation. Regular [exterior detailing](/exterior-car-detailing) with paint protection helps prevent damage.
 
 ### What's the best time of year to detail a car in California?
 Before summer (for UV protection) and after fire season (to remove ash) are ideal times. However, regular year-round maintenance is the best approach.
@@ -268,7 +352,7 @@ Detail before expected rain so your paint has protection. After heavy rain, a ma
     imageAlt: "California car detailing experts working on a vehicle",
     readTime: "6 min read",
     meta: {
-      title: "How Often Should You Detail Your Car in California? | Expert Guide",
+      title: "How Often Should You Detail Your Car in California - Expert Guide",
       description: "Learn the optimal car detailing frequency for California's unique climate. Expert tips for Bay Area and California car owners on protecting their vehicles."
     }
   },
@@ -408,9 +492,9 @@ For most Bay Area drivers, we recommend:
 Still not sure which service you need? [Albros Premium](/services) offers free vehicle assessments. We'll inspect your car and recommend exactly what it needs—no upselling, just honest advice.
 
 **Choose Your Service:**
-- [Interior Detail](/services#interior-detail) - $175 | 2-3 hours | Deep cabin cleaning
-- [Exterior Detail](/services#exterior-detail) - $175 | 2-3 hours | Paint restoration & protection
-- [All-in Detail](/services#all-in-detail) - $285 | 4-5 hours | Complete transformation (Best Value)
+- [Interior Detailing](/interior-car-detailing) - $175 | 2-3 hours | Deep cabin cleaning
+- [Exterior Detailing](/exterior-car-detailing) - $175 | 2-3 hours | Paint restoration & protection
+- [Full Car Detailing](/full-car-detailing) - $285 | 4-5 hours | Complete transformation (Best Value)
 
 [Compare all services](/services) | [Book a free assessment](/contact)
 
@@ -419,16 +503,16 @@ Still not sure which service you need? [Albros Premium](/services) offers free v
 ## Frequently Asked Questions
 
 ### What is included in an interior car detail?
-[Interior detailing](/services#interior-detail) includes deep vacuuming, steam cleaning, leather conditioning, dashboard cleaning, air vent cleaning, window cleaning, and odor elimination.
+[Interior detailing](/interior-car-detailing) includes deep vacuuming, steam cleaning, leather conditioning, dashboard cleaning, air vent cleaning, window cleaning, and odor elimination.
 
 ### What is included in an exterior car detail?
-[Exterior detailing](/services#exterior-detail) includes hand wash, clay bar treatment, paint correction, polishing, waxing, tire and wheel cleaning, trim restoration, and glass treatment.
+[Exterior detailing](/exterior-car-detailing) includes hand wash, clay bar treatment, paint correction, polishing, waxing, tire and wheel cleaning, trim restoration, and glass treatment.
 
 ### Is a full detail worth the extra cost?
-Yes! Our [All-in Detail](/services#all-in-detail) combines interior and exterior services at a discounted rate, providing the most comprehensive care and best value for your vehicle.
+Yes! Our [Full Car Detailing](/full-car-detailing) combines interior and exterior services at a discounted rate, providing the most comprehensive care and best value for your vehicle.
 
 ### How long does a full car detail take?
-A full detail typically takes 4-5 hours. [Interior-only](/services#interior-detail) or [exterior-only](/services#exterior-detail) details take 2-3 hours each.
+A full detail typically takes 4-5 hours. [Interior-only](/interior-car-detailing) or [exterior-only](/exterior-car-detailing) details take 2-3 hours each.
     `,
     author: "Albros Premium Team",
     publishedAt: "2025-01-05",
@@ -439,7 +523,7 @@ A full detail typically takes 4-5 hours. [Interior-only](/services#interior-deta
     imageAlt: "Interior car detailing service in San Jose",
     readTime: "7 min read",
     meta: {
-      title: "Interior vs Exterior Detail: Which Do You Need? | Decision Guide",
+      title: "Interior vs Exterior Car Detail - Which Do You Need",
       description: "Not sure if you need interior or exterior detailing? Learn what each service includes and how to decide what your car needs. Expert guide from Bay Area detailers."
     }
   },
@@ -577,9 +661,9 @@ Look for these qualities in a mobile detailer:
 Experience the convenience of professional car care at your location. [Albros Premium](/services) serves the entire Bay Area with fully-equipped mobile detailing—we bring everything needed to deliver showroom-quality results wherever you are.
 
 **Our Mobile Service Packages:**
-- [Premium Wash](/services#premium-wash) - $80 | Quick exterior refresh
-- [Deluxe Wash](/services#deluxe-wash) - $140 | Exterior + basic interior
-- [All-in Detail](/services#all-in-detail) - $285 | Complete transformation
+- [Premium Car Wash](/premium-car-wash) - $80 | Quick exterior refresh
+- [Deluxe Car Wash](/deluxe-car-wash) - $140 | Exterior + basic interior
+- [Full Car Detailing](/full-car-detailing) - $285 | Complete transformation
 
 [Check if we serve your area](/locations) | [Book your first mobile detail](/contact)
 
@@ -608,7 +692,7 @@ Light rain doesn't stop us—we can work under covered parking. For heavy rain, 
     imageAlt: "Mobile auto detailing service at customer's home",
     readTime: "6 min read",
     meta: {
-      title: "Mobile Car Detailing: What to Expect | At-Home Car Care Guide",
+      title: "Mobile Car Detailing - What to Expect at Home",
       description: "First time trying mobile detailing? Learn how at-home car care works, what to prepare, and why Bay Area drivers love the convenience. Complete guide inside."
     }
   },
@@ -782,9 +866,9 @@ Your car is likely your second-largest investment after your home. Protecting it
 [Albros Premium](/services) offers paint protection services ranging from premium sealants applied during our detail services to ceramic coating recommendations. [Book a free assessment](/contact) and we'll recommend the right protection level for your vehicle and budget.
 
 **Protection Services We Offer:**
-- [Premium Wash](/services#premium-wash) - Basic protection with quality wax
-- [Exterior Detail](/services#exterior-detail) - Advanced sealant application
-- [All-in Detail](/services#all-in-detail) - Complete protection inside and out
+- [Premium Car Wash](/premium-car-wash) - Basic protection with quality wax
+- [Exterior Detailing](/exterior-car-detailing) - Advanced sealant application
+- [Full Car Detailing](/full-car-detailing) - Complete protection inside and out
 
 [Learn about our services](/services) | [Contact us for ceramic coating info](/contact)
 
@@ -793,19 +877,19 @@ Your car is likely your second-largest investment after your home. Protecting it
 ## Frequently Asked Questions
 
 ### What is the best paint protection for Bay Area cars?
-For most Bay Area drivers, a quality paint sealant (applied every 4-6 months during [exterior detailing](/services#exterior-detail)) provides excellent protection. For maximum protection, consider ceramic coating.
+For most Bay Area drivers, a quality paint sealant (applied every 4-6 months during [exterior detailing](/exterior-car-detailing)) provides excellent protection. For maximum protection, consider ceramic coating.
 
 ### How much does ceramic coating cost?
 Professional ceramic coating typically costs $500-2000 depending on the product and vehicle size. [Contact us](/contact) for specific recommendations and referrals.
 
 ### Is wax or sealant better for California cars?
-Sealants are generally better for California due to superior UV protection and longer durability (4-6 months vs 4-8 weeks for wax). Our [Exterior Detail](/services#exterior-detail) includes professional sealant application.
+Sealants are generally better for California due to superior UV protection and longer durability (4-6 months vs 4-8 weeks for wax). Our [Exterior Detailing](/exterior-car-detailing) includes professional sealant application.
 
 ### Does paint protection film prevent all scratches?
 PPF (clear bra) prevents most rock chips and minor scratches but isn't indestructible. It's best for high-impact areas like the front bumper and hood.
 
 ### How do I maintain my paint protection?
-Regular maintenance washes (every 2-4 weeks) using pH-neutral soap keep your protection working effectively. Our [Premium Wash](/services#premium-wash) is perfect for maintenance between full details.
+Regular maintenance washes (every 2-4 weeks) using pH-neutral soap keep your protection working effectively. Our [Premium Car Wash](/premium-car-wash) is perfect for maintenance between full details.
     `,
     author: "Albros Premium Team",
     publishedAt: "2025-01-01",
@@ -816,7 +900,7 @@ Regular maintenance washes (every 2-4 weeks) using pH-neutral soap keep your pro
     imageAlt: "Premium car detail results showing protected paint",
     readTime: "8 min read",
     meta: {
-      title: "Why Bay Area Drivers Need Paint Protection | Complete Guide",
+      title: "Why Bay Area Drivers Need Paint Protection - Complete Guide",
       description: "Fog, sun, salt air—your Bay Area car faces unique threats. Learn about paint protection options from wax to ceramic coating and what's right for you."
     }
   }

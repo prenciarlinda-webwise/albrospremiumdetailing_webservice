@@ -5,19 +5,13 @@ import { BreadcrumbSchema } from "@/components/seo/StructuredData";
 import CTA from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "About Albros Premium Car Detailing | Bay Area's Trusted Detailers",
-  description: "Meet the team behind Albros Premium Car Detailing. Professional, insured mobile detailers serving San Jose & Bay Area. Learn our story and commitment to quality.",
-  keywords: [
-    "car detailing business",
-    "professional auto detailers Bay Area",
-    "about Albros detailing",
-    "mobile detailing company San Jose",
-  ],
+  title: "About Us - Bay Area's Trusted Mobile Detailers",
+  description: "Meet the team behind Albros Premium Car Detailing. Professional, insured mobile detailers serving San Jose and the Bay Area.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
   openGraph: {
-    title: "About Albros Premium Car Detailing | Bay Area's Trusted Detailers",
+    title: "About Us - Bay Area's Trusted Mobile Detailers",
     description: "Meet the team behind Albros Premium Car Detailing. Professional, insured mobile detailers serving San Jose & Bay Area.",
     url: `${siteConfig.url}/about`,
   },

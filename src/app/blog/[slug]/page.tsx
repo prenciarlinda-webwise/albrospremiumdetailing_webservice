@@ -29,7 +29,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.meta.title,
     description: post.meta.description,
-    keywords: post.tags,
     alternates: {
       canonical: `${siteConfig.url}/blog/${post.slug}`,
     },

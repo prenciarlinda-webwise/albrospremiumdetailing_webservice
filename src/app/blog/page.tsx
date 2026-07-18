@@ -6,19 +6,13 @@ import { blogPosts } from "@/data/blog-posts";
 import { BreadcrumbSchema } from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Car Detailing Blog | Expert Tips & How-To Guides | Albros",
-  description: "Expert car detailing tips and guides from professional Bay Area detailers. Learn about paint protection, interior cleaning, California car care, and more.",
-  keywords: [
-    "car detailing tips",
-    "auto detailing guide",
-    "car care advice",
-    "how to detail a car",
-  ],
+  title: "Car Detailing Blog - Expert Tips & How-To Guides",
+  description: "Expert car detailing tips and guides from professional Bay Area detailers. Paint protection, interior cleaning, and California car care advice.",
   alternates: {
     canonical: `${siteConfig.url}/blog`,
   },
   openGraph: {
-    title: "Car Detailing Blog - Expert Tips & Professional Guides",
+    title: "Car Detailing Blog - Expert Tips and Professional Guides",
     description: "Professional car detailing tips and guides for Bay Area drivers. Expert advice on car care, maintenance, and protection from certified detailers.",
     url: `${siteConfig.url}/blog`,
   },

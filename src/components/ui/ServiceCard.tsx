@@ -87,7 +87,7 @@ export default function ServiceCard({ service, featured = false }: ServiceCardPr
           Book Now
         </a>
         <Link
-          href={`/services#${service.id}`}
+          href={service.hubSlug ? `/${service.hubSlug}` : `/services#${service.id}`}
           className={`block w-full rounded-full py-3 px-4 text-center text-sm font-medium transition-colors ${
             featured
               ? "border border-white/30 text-white hover:bg-white/10"
