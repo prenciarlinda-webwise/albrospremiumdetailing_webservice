@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function LocationBusinessSchema({ location }: { location: NonNullable<ReturnType<typeof getLocationBySlug>> }) {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "AutoDetailing",
+    "@type": "AutoWash",
     "@id": `${siteConfig.url}/mobile-detailing-${location.slug}#localbusiness`,
     name: `${siteConfig.name} - ${location.name}`,
     description: location.description,

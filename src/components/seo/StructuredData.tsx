@@ -9,7 +9,7 @@ interface StructuredDataProps {
 export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "AutoDetailing",
+    "@type": "AutoWash",
     "@id": `${siteConfig.url}/#localbusiness`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
@@ -102,7 +102,7 @@ export function ServiceSchema({ service }: { service: typeof services[0] }) {
     name: service.name,
     description: service.description,
     provider: {
-      "@type": "AutoDetailing",
+      "@type": "AutoWash",
       name: siteConfig.name,
       url: siteConfig.url
     },
